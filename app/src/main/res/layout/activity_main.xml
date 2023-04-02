@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="true"
+        tools:context=".ui.MainActivity">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_radio_stations"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:focusable="true"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:paddingBottom="4dp"
+                android:scrollbars="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/volume_controls"
+                tools:listitem="@layout/radio_station_item"
+                />
+
+
+        <LinearLayout
+            android:id="@+id/volume_controls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@color/design_default_color_on_primary"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rv_radio_stations"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/btn_mute"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Mute"
+                android:textSize="8sp"
+                android:layout_margin="5dp"
+                android:drawableTint="@android:color/holo_red_dark"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:drawableTop="@drawable/volume_off" />
+
+            <TextView
+                android:id="@+id/btn_volume_up"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textSize="8sp"
+                android:text="Volume up"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:layout_margin="5dp"
+                android:drawableTop="@drawable/volume_up"
+                />
+
+
+            <TextView
+                android:id="@+id/btn_volume_down"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textSize="8sp"
+                android:textColor="@color/black"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:text="Volume Down"
+                android:drawableTop="@drawable/volume_down"
+                />
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</layout>

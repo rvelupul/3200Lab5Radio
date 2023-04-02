@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:background="@android:color/darker_gray"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_radio_icon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/baseline_radio_24"
+            app:shapeAppearanceOverlay="@style/circleImageView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent="0.8"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.15" />
+
+
+
+        <TextView
+            android:id="@+id/tv_radio_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Radio name"
+            android:textColor="@color/black"
+            android:layout_marginStart="10dp"
+            app:layout_constraintTop_toTopOf="@id/iv_radio_icon"
+            app:layout_constraintBottom_toBottomOf="@id/iv_radio_icon"
+            app:layout_constraintStart_toEndOf="@id/iv_radio_icon"
+            />
+
+        <ImageView
+            android:id="@+id/btn_play_pause"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/baseline_play_circle_24"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>
